@@ -2,7 +2,7 @@ import { StatsCard } from "@/components/Cards/Card";
 import { PipelineOverview } from "@/components/Dashboard/PipelineOverview";
 import { RecentApplicants } from "@/components/Dashboard/RecentApplicants";
 import { Briefcase, Users, UserCheck, Calendar } from "lucide-react";
-import { mockJobs, mockApplicants } from "@/lib/mock-data";
+import { mockApplicants } from "@/lib/mock-data";
 import { UpcomingInterviews } from "@/components/Dashboard/UpcomingInterviews";
 
 const stats = [

@@ -14,6 +14,8 @@ import { usePathname } from "next/navigation";
 
 const matchPath = {
   dashboard: { name: "Dashboard", description: "Welcome back, " },
+  "/jobs": { name: "Jobs", description: "Manage your job postings" },
+  "/applicants": { name: "Applicants", description: "Review your applicants" },
 };
 
 export default function Navbar() {
@@ -33,10 +35,7 @@ export default function Navbar() {
           {navName.name}
         </h1>
         {navName.description && (
-          <p className="text-sm text-muted-foreground">
-            {navName.description}
-            {userName}
-          </p>
+          <p className="text-sm text-muted-foreground">{navName.description}</p>
         )}
       </div>
 
@@ -48,7 +47,10 @@ export default function Navbar() {
 
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="ghost" className="flex items-center gap-2 px-2">
+            <Button
+              variant="ghost"
+              className="border-0 flex items-center gap-2 px-2 hover:bg-primary/10 hover:text-foreground data-[state=open]:bg-primary/10 transition-colors"
+            >
               <Avatar className="h-8 w-8">
                 <AvatarImage src="/placeholder.svg?height=32&width=32" />
                 <AvatarFallback>JD</AvatarFallback>
